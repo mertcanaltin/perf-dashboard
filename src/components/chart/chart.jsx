@@ -1,13 +1,13 @@
 import React from "react";
 import { Card} from "antd";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer } from 'recharts';
 
 
 export default function chart(props) {
 
   return (
     <div className="site-card-wrapper">
-          <Card title={props.title} bordered={true}>
+          <Card className="title" title={props.title} bordered={true}>
           <ResponsiveContainer width='99%' aspect={2.0 / 0.75}>
         <LineChart
           width={500}

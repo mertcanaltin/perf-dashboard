@@ -1,0 +1,457 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home test snapshot 1`] = `
+<section
+  className="ant-layout home-container"
+  data-testid="home-element"
+>
+  <section
+    className="ant-layout"
+  >
+    <main
+      className="ant-layout-content site-layout"
+      style={
+        Object {
+          "marginTop": 64,
+          "padding": "0 50px",
+        }
+      }
+    >
+      <div
+        className="site-layout-background"
+        style={
+          Object {
+            "minHeight": 240,
+            "padding": 10,
+          }
+        }
+      >
+        <div
+          className="ant-card ant-card-bordered"
+          style={
+            Object {
+              "width": 300,
+            }
+          }
+        >
+          <div
+            className="ant-card-body"
+            style={Object {}}
+          >
+            <h4
+              className="ant-typography title-hello"
+              style={
+                Object {
+                  "WebkitLineClamp": undefined,
+                  "marginTop": 14,
+                }
+              }
+            >
+              <strong>
+                Hello Perf-Dashboard
+              </strong>
+            </h4>
+            <div
+              className="ant-picker"
+              onMouseUp={[Function]}
+            >
+              <div
+                className="ant-picker-input"
+              >
+                <input
+                  autoComplete="off"
+                  data-testid="custom-element"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  placeholder="Start Time"
+                  readOnly={true}
+                  size={10}
+                  title=""
+                  value=""
+                />
+                <span
+                  className="ant-picker-suffix"
+                >
+                  <span
+                    aria-label="clock-circle"
+                    className="anticon anticon-clock-circle"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      data-icon="clock-circle"
+                      fill="currentColor"
+                      focusable="false"
+                      height="1em"
+                      viewBox="64 64 896 896"
+                      width="1em"
+                    >
+                      <path
+                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                      />
+                      <path
+                        d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              className="ant-picker"
+              onMouseUp={[Function]}
+            >
+              <div
+                className="ant-picker-input"
+              >
+                <input
+                  autoComplete="off"
+                  data-testid="custom-element"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseDown={[Function]}
+                  placeholder="End Time"
+                  readOnly={true}
+                  size={10}
+                  title=""
+                  value=""
+                />
+                <span
+                  className="ant-picker-suffix"
+                >
+                  <span
+                    aria-label="clock-circle"
+                    className="anticon anticon-clock-circle"
+                    role="img"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      data-icon="clock-circle"
+                      fill="currentColor"
+                      focusable="false"
+                      height="1em"
+                      viewBox="64 64 896 896"
+                      width="1em"
+                    >
+                      <path
+                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                      />
+                      <path
+                        d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z"
+                      />
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <button
+              className="ant-btn ant-btn-primary"
+              onClick={[Function]}
+              type="button"
+            >
+              <span>
+                Primary Button
+              </span>
+            </button>
+          </div>
+        </div>
+        ,
+      </div>
+    </main>
+  </section>
+  <main
+    className="ant-layout-content site-layout"
+    style={
+      Object {
+        "marginTop": 64,
+        "padding": "0 50px",
+      }
+    }
+  >
+    <div
+      className="site-layout-background"
+      style={
+        Object {
+          "minHeight": 380,
+          "padding": 24,
+        }
+      }
+    >
+      <div
+        className="ant-row"
+        style={
+          Object {
+            "marginBottom": -8,
+            "marginLeft": -12,
+            "marginRight": -12,
+            "marginTop": -8,
+          }
+        }
+      >
+        <div
+          className="ant-col ant-col-12"
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <div
+            className="site-card-wrapper"
+          >
+            <div
+              className="ant-card ant-card-bordered title"
+            >
+              <div
+                className="ant-card-head"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-head-wrapper"
+                >
+                  <div
+                    className="ant-card-head-title"
+                  >
+                    TTFB
+                  </div>
+                </div>
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="recharts-responsive-container"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "maxHeight": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "width": "99%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+             
+          </div>
+        </div>
+        <div
+          className="ant-col ant-col-12"
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <div
+            className="site-card-wrapper"
+          >
+            <div
+              className="ant-card ant-card-bordered title"
+            >
+              <div
+                className="ant-card-head"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-head-wrapper"
+                >
+                  <div
+                    className="ant-card-head-title"
+                  >
+                    FCP
+                  </div>
+                </div>
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="recharts-responsive-container"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "maxHeight": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "width": "99%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+             
+          </div>
+        </div>
+        <div
+          className="ant-col ant-col-12"
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <div
+            className="site-card-wrapper"
+          >
+            <div
+              className="ant-card ant-card-bordered title"
+            >
+              <div
+                className="ant-card-head"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-head-wrapper"
+                >
+                  <div
+                    className="ant-card-head-title"
+                  >
+                    DomLoad
+                  </div>
+                </div>
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="recharts-responsive-container"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "maxHeight": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "width": "99%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+             
+          </div>
+        </div>
+        <div
+          className="ant-col ant-col-12"
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <div
+            className="site-card-wrapper"
+          >
+            <div
+              className="ant-card ant-card-bordered title"
+            >
+              <div
+                className="ant-card-head"
+                style={Object {}}
+              >
+                <div
+                  className="ant-card-head-wrapper"
+                >
+                  <div
+                    className="ant-card-head-title"
+                  >
+                    Window Load
+                  </div>
+                </div>
+              </div>
+              <div
+                className="ant-card-body"
+                style={Object {}}
+              >
+                <div
+                  className="recharts-responsive-container"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "maxHeight": undefined,
+                      "minHeight": undefined,
+                      "minWidth": undefined,
+                      "width": "99%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+             
+          </div>
+        </div>
+      </div>
+      <table
+        data-testid="table"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <colgroup />
+        <thead
+          className="ant-table-thead"
+        >
+          <tr>
+            <th
+              className="ant-table-cell url"
+            >
+              Url
+            </th>
+            <th
+              className="ant-table-cell type"
+            >
+              Initiator Type
+            </th>
+            <th
+              className="ant-table-cell size"
+            >
+              Transfer Size
+            </th>
+            <th
+              className="ant-table-cell duration"
+            >
+              Duration
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          className="ant-table-tbody"
+        />
+      </table>
+    </div>
+  </main>
+  <footer
+    className="ant-layout-footer"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Mert Can Altın ©2021
+  </footer>
+</section>
+`;

@@ -4,68 +4,11 @@ import {  Table, Tag, Space  } from "antd";
 
 const { Column, ColumnGroup } = Table;
 
-export default function TableComp(props) {
+export default function TableComp(props: { data: Analytic[] }) {
 const analytics = [];
     
-props.data.forEach(data => {
-    analytics.push(...data.resources);
-});
+
 console.log(analytics.resources);
-    
-  const columns = [
-  {
-    title: 'Url',
-    dataIndex: 'url',
-    key: 'url',
-    render: url => <a>{url}</a>,
-  },
-  {
-    title: 'Initiator Type',
-    dataIndex: 'initiatorType',
-    key: 'initiatorType',
-    render: initiatorType => <a>{initiatorType}</a>,
-  },
-  {
-    title: 'Transfer Size',
-    dataIndex: 'transferSize',
-    key: 'transferSize',
-    render: transferSize => <a>{transferSize}</a>,
-  },
-   {
-    title: 'Duration',
-    dataIndex: 'duration',
-    key: 'duration',
-    render: duration => <a>{duration}</a>,
-  },
-  
-  
-];
-
- const data = [
-    {
-    key: 'url',
-    url: {},
-    
-  },
-  {
-    key: 'initiatorType',
-    initiatorType: 'John Brown',
-    
-  },
-  {
-    key: 'transferSize',
-    transferSize: 'Jim Green',
-    
-  },
-  {
-    key: 'duration',
-    duration: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
-  },
-]; 
-
 
 
  analytics.map((row) => (
@@ -74,14 +17,14 @@ console.log(analytics.resources);
 ))
     return (
         
-       <table style={{ width: "100%" }}>
+       <table data-testid="table" style={{ width: "100%" }}>
         <colgroup></colgroup>
         <thead className="ant-table-thead">
           <tr>
-            <th className="ant-table-cell">Url</th>
-            <th className="ant-table-cell">Initiator Type</th>
-            <th className="ant-table-cell">Transfer Size</th>
-            <th className="ant-table-cell">Duration</th>
+            <th className="ant-table-cell url">Url</th>
+            <th className="ant-table-cell type">Initiator Type</th>
+            <th className="ant-table-cell size">Transfer Size</th>
+            <th className="ant-table-cell duration">Duration</th>
           </tr>
         </thead>
         <tbody className="ant-table-tbody">

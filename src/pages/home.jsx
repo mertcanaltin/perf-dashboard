@@ -2,31 +2,43 @@ import React from "react";
 import Chart from "../components/chart/chart";
 import TimePicker from '../components/timepicker/timepicker';
 import TableComp from '../components/table/table';
-import { Layout, Col, Row,Typography } from "antd";
+
+import { Layout, Col, Row,Typography,Card,Button } from "antd";
 import {getAnalytics} from '../service/api.jsx'
 import useSWR from "swr";
 
+global.matchMedia = global.matchMedia || function() {
+    return {
+        matches : false,
+        addListener : function() {},
+        removeListener: function() {}
+    }
+}
 
 const { Content, Footer } = Layout;
 const { Title } = Typography;
 
 export default function Home() {
   const THIRTY_MINUTES =  30 * 60 * 1000;
-  const url =  process.env.REACT_APP_API_KEY;
+
   const [startTime, setStartTime] = React.useState(new Date(new Date().getTime() - THIRTY_MINUTES));
   const [endTime, setEndTime] = React.useState(new Date());
+
   const fetcher = async () => {
     const startTimestamp = startTime ? startTime.getTime() : 0;
         const endTimestamp = endTime ? endTime.getTime() : 0;
+
     return await getAnalytics(startTimestamp, endTimestamp);
 }
-  // const { data, error } = useSWR(url, fetcher)
-  const { data,error, reports, revalidate } = useSWR('analytics', fetcher);
+  const { data, revalidate } = useSWR('analytics', fetcher);
 
  console.log(data);
+ console.log(startTime,'wwww');
+ console.log(endTime,'gggg');
+
 
   return (
-    <Layout>
+    <Layout data-testid="home-element" className="home-container">
       <Layout>
       <Content
         className="site-layout"
@@ -36,9 +48,20 @@ export default function Home() {
           className="site-layout-background"
           style={{ padding: 10, minHeight: 240 }}
         >
-          
-          <Title style={{  marginTop: 14 }} strong='false' level={4}>Hello Perf-Dashboard</Title>
+            <Card style={{ width: 300 }}>
+          <Title className="title-hello" style={{  marginTop: 14 }} strong='false' level={4}>Hello Perf-Dashboard</Title>
+             <TimePicker  label='Start Time' value={startTime}  onChange={(value: Date | null) => {
+                    setStartTime(value);
 
+                    setTimeout(revalidate, 10);
+                }}/>
+                <TimePicker  data-testid="end-time" label='End Time' value={endTime} onChange={(value: Date | null) => {
+                    setEndTime(value);
+
+                    setTimeout(revalidate, 10);
+                }}/>
+                <Button  type="primary">Primary Button</Button>
+            </Card>,
         </div>
       </Content>
       </Layout>
@@ -64,7 +87,7 @@ export default function Home() {
               <Chart title="Window Load" dataKey="windowLoad" data={data || []} />
             </Col>
           </Row>
-          <TableComp data={data || []}/>
+          <TableComp key="uniqueId1" data={data || []}/>
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>Mert Can Altın ©2021</Footer>
