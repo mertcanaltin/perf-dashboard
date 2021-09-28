@@ -18,8 +18,6 @@ test('Table test', ()=>{
     };
 
     const { debug,container } = render(<Table data={[dummyData]}/>);
-
-
     const tableUrlEl = container.querySelector('.url');
     const tableTypeEl = container.querySelector('.type');
     const tableSizeEl = container.querySelector('.size');

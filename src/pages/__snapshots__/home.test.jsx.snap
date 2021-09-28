@@ -403,7 +403,6 @@ exports[`Home test snapshot 1`] = `
         </div>
       </div>
       <table
-        data-testid="table"
         style={
           Object {
             "width": "100%",
