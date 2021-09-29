@@ -11,7 +11,6 @@ export default function TableComp(props) {
     analytics.map((row) => console.log(row));
     return (
         <table style={{ width: "100%" }}>
-            <colgroup></colgroup>
             <thead className="ant-table-thead">
             <tr>
                 <th className="ant-table-cell url">Url</th>

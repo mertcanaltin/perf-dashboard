@@ -3,7 +3,7 @@ import Chart from "../components/chart/chart";
 import TimePicker from "../components/timepicker/timepicker";
 import TableComp from "../components/table/table";
 
-import { Layout, Col, Row, Typography, Card, Button } from "antd";
+import { Layout, Col, Row, Typography, Card } from "antd";
 import { getAnalytics } from "../service/api.jsx";
 import useSWR from "swr";
 
@@ -37,8 +37,8 @@ export default function Home() {
     const { data, revalidate } = useSWR("analytics", fetcher);
 
     console.log(data);
-    console.log(startTime, "wwww");
-    console.log(endTime, "gggg");
+    console.log(startTime, "s");
+    console.log(endTime, "e");
 
     return (
         <Layout data-testid="home-element" className="home-container">
@@ -49,9 +49,9 @@ export default function Home() {
                 >
                     <div
                         className="site-layout-background"
-                        style={{ padding: 10, minHeight: 240 }}
+                        style={{ padding: 10}}
                     >
-                        <Card style={{ width: 300 }}>
+                        <Card >
                             <Title
                                 className="title-hello"
                                 style={{ marginTop: 14 }}
@@ -61,11 +61,11 @@ export default function Home() {
                                 Hello Perf-Dashboard
                             </Title>
                             <TimePicker
+                                style={{marginRight: 4}}
                                 label="Start Time"
                                 value={startTime}
                                 onChange={(value: Date | null) => {
                                     setStartTime(value);
-
                                     setTimeout(revalidate, 10);
                                 }}
                             />
@@ -75,13 +75,11 @@ export default function Home() {
                                 value={endTime}
                                 onChange={(value: Date | null) => {
                                     setEndTime(value);
-
                                     setTimeout(revalidate, 10);
                                 }}
                             />
-                            <Button type="primary">Primary Button</Button>
                         </Card>
-                        ,
+
                     </div>
                 </Content>
             </Layout>
@@ -93,7 +91,7 @@ export default function Home() {
                     className="site-layout-background"
                     style={{ padding: 24, minHeight: 380 }}
                 >
-                    <Row gutter={[24, 16]}>
+                    <Row gutter={[24, 16]} style={{ marginBottom: 28 }} >
                         <Col span={12}>
                             <Chart title="TTFB" dataKey="timeToFirstByte" data={data || []} />
                         </Col>

@@ -21,18 +21,12 @@ exports[`Home test snapshot 1`] = `
         className="site-layout-background"
         style={
           Object {
-            "minHeight": 240,
             "padding": 10,
           }
         }
       >
         <div
           className="ant-card ant-card-bordered"
-          style={
-            Object {
-              "width": 300,
-            }
-          }
         >
           <div
             className="ant-card-body"
@@ -60,7 +54,7 @@ exports[`Home test snapshot 1`] = `
               >
                 <input
                   autoComplete="off"
-                  data-testid="custom-element"
+                  data-testid="timepicker-element"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -109,7 +103,7 @@ exports[`Home test snapshot 1`] = `
               >
                 <input
                   autoComplete="off"
-                  data-testid="custom-element"
+                  data-testid="timepicker-element"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -149,18 +143,8 @@ exports[`Home test snapshot 1`] = `
                 </span>
               </div>
             </div>
-            <button
-              className="ant-btn ant-btn-primary"
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Primary Button
-              </span>
-            </button>
           </div>
         </div>
-        ,
       </div>
     </main>
   </section>
@@ -186,7 +170,7 @@ exports[`Home test snapshot 1`] = `
         className="ant-row"
         style={
           Object {
-            "marginBottom": -8,
+            "marginBottom": 28,
             "marginLeft": -12,
             "marginRight": -12,
             "marginTop": -8,
@@ -409,7 +393,6 @@ exports[`Home test snapshot 1`] = `
           }
         }
       >
-        <colgroup />
         <thead
           className="ant-table-thead"
         >
