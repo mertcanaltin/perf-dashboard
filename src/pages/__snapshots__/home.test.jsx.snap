@@ -86,8 +86,8 @@ exports[`Home test snapshot 1`] = `
                   placeholder="Start Time"
                   readOnly={true}
                   size={10}
-                  title="21:24:14"
-                  value="21:24:14"
+                  title="21:57:12"
+                  value="21:57:12"
                 />
                 <span
                   className="ant-picker-suffix"
@@ -171,8 +171,8 @@ exports[`Home test snapshot 1`] = `
                   placeholder="End Time"
                   readOnly={true}
                   size={10}
-                  title="21:54:14"
-                  value="21:54:14"
+                  title="22:27:12"
+                  value="22:27:12"
                 />
                 <span
                   className="ant-picker-suffix"
@@ -471,6 +471,16 @@ exports[`Home test snapshot 1`] = `
           </div>
         </div>
       </div>
+      <h3
+        className="ant-typography"
+        style={
+          Object {
+            "WebkitLineClamp": undefined,
+          }
+        }
+      >
+        File upload analytics
+      </h3>
       <table
         style={
           Object {
