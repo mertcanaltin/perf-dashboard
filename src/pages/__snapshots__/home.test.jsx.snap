@@ -45,6 +45,29 @@ exports[`Home test snapshot 1`] = `
                 Hello Perf-Dashboard
               </strong>
             </h4>
+            <a
+              className="ant-typography"
+              href="https://perf-js.vercel.app/"
+              rel="noopener noreferrer"
+              style={
+                Object {
+                  "WebkitLineClamp": undefined,
+                }
+              }
+              target="_blank"
+            >
+              Demo Data (https://perf-js.vercel.app/)
+            </a>
+            <h5
+              className="ant-typography"
+              style={
+                Object {
+                  "WebkitLineClamp": undefined,
+                }
+              }
+            >
+              Start Time
+            </h5>
             <div
               className="ant-picker"
               onMouseUp={[Function]}
@@ -63,8 +86,8 @@ exports[`Home test snapshot 1`] = `
                   placeholder="Start Time"
                   readOnly={true}
                   size={10}
-                  title="21:04:15"
-                  value="21:04:15"
+                  title="21:24:14"
+                  value="21:24:14"
                 />
                 <span
                   className="ant-picker-suffix"
@@ -120,6 +143,16 @@ exports[`Home test snapshot 1`] = `
                 </span>
               </div>
             </div>
+            <h5
+              className="ant-typography"
+              style={
+                Object {
+                  "WebkitLineClamp": undefined,
+                }
+              }
+            >
+              End Time
+            </h5>
             <div
               className="ant-picker"
               onMouseUp={[Function]}
@@ -138,8 +171,8 @@ exports[`Home test snapshot 1`] = `
                   placeholder="End Time"
                   readOnly={true}
                   size={10}
-                  title="21:34:15"
-                  value="21:34:15"
+                  title="21:54:14"
+                  value="21:54:14"
                 />
                 <span
                   className="ant-picker-suffix"

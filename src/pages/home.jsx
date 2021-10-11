@@ -2,9 +2,11 @@ import React, {useEffect, useState} from "react";
 import Chart from "../components/chart/chart";
 import TimePicker from "../components/timepicker/timepicker";
 import TableComp from "../components/table/table";
-import { Layout, Col, Row, Typography, Card } from "antd";
 import { getAnalytics } from "../service/api.jsx";
 import moment from "moment";
+import { Layout, Col, Row, Typography, Card } from "antd";
+const { Content, Footer } = Layout;
+const { Title,Link } = Typography;
 
 global.matchMedia =
     global.matchMedia ||
@@ -15,9 +17,6 @@ global.matchMedia =
             removeListener: function () {},
         };
     };
-
-const { Content, Footer } = Layout;
-const { Title } = Typography;
 
 export default function Home() {
     const [analytics,setAnalytics] = useState([]);
@@ -59,6 +58,10 @@ export default function Home() {
                             >
                                 Hello Perf-Dashboard
                             </Title>
+                            <Link href="https://perf-js.vercel.app/" target="_blank">
+                                Demo Data (https://perf-js.vercel.app/)
+                            </Link>
+                            <Title level={5}>Start Time</Title>
                             <TimePicker
                                 style={{marginRight: 4}}
                                 label="Start Time"
@@ -68,6 +71,7 @@ export default function Home() {
                                     setTimeout(fetch(),10);
                                 }}
                             />
+                            <Title level={5}>End Time</Title>
                             <TimePicker
                                 data-testid="end-time"
                                 label="End Time"

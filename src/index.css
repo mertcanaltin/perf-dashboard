@@ -26,3 +26,7 @@ code {
 .perf-title {
   color:white;
 }
+
+.ant-picker {
+  margin-bottom: 2% !important;
+}
