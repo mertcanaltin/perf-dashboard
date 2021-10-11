@@ -1,11 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Chart from "../components/chart/chart";
 import TimePicker from "../components/timepicker/timepicker";
 import TableComp from "../components/table/table";
-
 import { Layout, Col, Row, Typography, Card } from "antd";
 import { getAnalytics } from "../service/api.jsx";
-import useSWR from "swr";
+import moment from "moment";
 
 global.matchMedia =
     global.matchMedia ||
@@ -21,24 +20,24 @@ const { Content, Footer } = Layout;
 const { Title } = Typography;
 
 export default function Home() {
-    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const [analytics,setAnalytics] = useState([]);
+    const [endTime, setEndTime] = useState(moment().toDate());
 
-    const [startTime, setStartTime] = React.useState(
-        new Date(new Date().getTime() - THIRTY_MINUTES)
+    const [startTime, setStartTime] = useState(
+        moment().subtract(30,'minutes').toDate()
     );
-    const [endTime, setEndTime] = React.useState(new Date());
 
-    const fetcher = async () => {
-        const startTimestamp = startTime ? startTime.getTime() : 0;
-        const endTimestamp = endTime ? endTime.getTime() : 0;
-
-        return await getAnalytics(startTimestamp, endTimestamp);
+    const fetch = async () => {
+        const startTimestamp = startTime ? moment(startTime) : 0;
+        const endTimestamp = endTime ? moment(endTime) : 0;
+        getAnalytics(startTimestamp, endTimestamp).then(response => {
+            setAnalytics(response);
+        });
     };
-    const { data, revalidate } = useSWR("analytics", fetcher);
 
-    console.log(data);
-    console.log(startTime, "s");
-    console.log(endTime, "e");
+    useEffect(() =>{
+        fetch();
+    },[]);
 
     return (
         <Layout data-testid="home-element" className="home-container">
@@ -66,7 +65,7 @@ export default function Home() {
                                 value={startTime}
                                 onChange={(value: Date | null) => {
                                     setStartTime(value);
-                                    setTimeout(revalidate, 10);
+                                    setTimeout(fetch(),10);
                                 }}
                             />
                             <TimePicker
@@ -75,11 +74,10 @@ export default function Home() {
                                 value={endTime}
                                 onChange={(value: Date | null) => {
                                     setEndTime(value);
-                                    setTimeout(revalidate, 10);
+                                    setTimeout(fetch(), 10);
                                 }}
                             />
                         </Card>
-
                     </div>
                 </Content>
             </Layout>
@@ -93,27 +91,27 @@ export default function Home() {
                 >
                     <Row gutter={[24, 16]} style={{ marginBottom: 28 }} >
                         <Col span={12}>
-                            <Chart title="TTFB" dataKey="timeToFirstByte" data={data || []} />
+                            <Chart title="TTFB" dataKey="timeToFirstByte" data={analytics || []} />
                         </Col>
                         <Col span={12}>
                             <Chart
                                 title="FCP"
                                 dataKey="firstContentfulPaint"
-                                data={data || []}
+                                data={analytics || []}
                             />
                         </Col>
                         <Col span={12}>
-                            <Chart title="DomLoad" dataKey="domLoad" data={data || []} />
+                            <Chart title="DomLoad" dataKey="domLoad" data={analytics || []} />
                         </Col>
                         <Col span={12}>
                             <Chart
                                 title="Window Load"
                                 dataKey="windowLoad"
-                                data={data || []}
+                                data={analytics || []}
                             />
                         </Col>
                     </Row>
-                    <TableComp key="uniqueId1" data={data || []} />
+                    <TableComp key="uniqueId1" data={analytics || []} />
                 </div>
             </Content>
             <Footer style={{ textAlign: "center" }}>Mert Can Altın ©2021</Footer>

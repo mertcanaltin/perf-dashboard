@@ -1,12 +1,13 @@
 import React from 'react';
-import { TimePicker,Input,ConfigProvider } from 'antd';
+import { TimePicker,ConfigProvider } from 'antd';
+import moment from "moment";
 
 
 
 export default function timepicker(props) {
     return (
         <ConfigProvider>
-            <TimePicker data-testid="timepicker-element" openTo="hours"  placeholder={props.label}   onChange={props.onChange} />
+            <TimePicker data-testid="timepicker-element" openTo="hours" value={moment(props.value)}  placeholder={props.label}   onChange={props.onChange} />
         </ConfigProvider>
     )
 }
