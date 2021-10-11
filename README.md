@@ -9,6 +9,8 @@ it shows the last 30 minutes of TTFB, FCP, Dom Load and Window Load, as shown in
 
 the panel consists of 3 zones, and if you want, you can enter a specific december time
 
+<img width="650" alt="seni seviyyorum trendyoll" src="https://i.hizliresim.com/ekt7x9k.png">a
+
 ## install
 
 packages install
