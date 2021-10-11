@@ -115,7 +115,7 @@ export default function Home() {
                             />
                         </Col>
                     </Row>
-                    <Title level={3}>File upload analytics</Title>
+                    <Title level={3}>Metrics</Title>
                     <TableComp key="uniqueId1" data={analytics || []} />
                 </div>
             </Content>
